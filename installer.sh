@@ -9,7 +9,6 @@ echo "The fish have been fished, starting starting"
 
 # Install starship
 sudo sh -c "$(curl -fsSL https://starship.rs/install.sh)" -y -f
-echo "starship init fish | source" >> ~/.config/fish/config.fish
 echo "Starchip launch, adding font"
 
 # Install nerd fond
@@ -19,6 +18,8 @@ wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/do
 && unzip JetBrainsMono.zip \
 && rm JetBrainsMono.zip \
 && fc-cache -fv
+
+echo "starship init fish | source" >> ~/.config/fish/config.fish
 
 echo "System ready, rebooting..."
 sudo reboot now
